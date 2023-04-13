@@ -1,0 +1,51 @@
+--- 
+title: "BS4 Book Template"
+author: "Hiroshi Suzuki"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+documentclass: bxjsbook #book
+classoption: xelatex, ja=standard
+bibliography: [book.bib, packages.bib]
+# url: https://icu-hsuzuki.github.io/eco-book/
+# cover-image: path to the social sharing image like images/cover.jpg
+description: |
+  This is a minimal example of using the bookdown package to write a book.
+  The HTML output format for this example is bookdown::bs4_book,
+  set in the _output.yml file.
+biblio-style: apalike
+csl: chicago-fullnote-bibliography.csl
+biblio-title: "参考文献"
+---
+
+# About this book
+
+Please read the last chapter for the usage and other information included in the original template in English. 
+
+In the following we add comments in Japanese.
+
+## 日本語版テンプレートについて
+
+[GitHub レポジトリ](https://github.com/icu-hsuzuki/bs4_book_template) の、README を参照してください。
+
+最初に、変更すべき点を以下に書きます。
+
+1. README.md を、ご自分の本にあうように書き換えてください。このテンプレートのリポジトリに、README はありますので、必要な時は参照してください。
+
+2. `bookdown.yml` の最初の行、`book_filename: "bs4_book_template"` を、書き換えてください。現在は、リポジトリの名前になっています。
+
+3. `output.yml` の５行目の、`repo: https://github.com/icu-hsuzuki/bs4_book_template
+` を、ご自分のリポジトリのアドレスに変更して下さい。`bs4_book` のスタイルでは、このアドレスが、左の帯の一番下に表示され、リポジトリにリンクされます。
+
+4. `index.html` には、YAML と呼ばれる、設定が、書かれていますが、まず、title と author がありますから、それらを、ご自身の本のタイトルと、ご自身の名前に変更してください。
+
+5. `url` と `cover-image` が、コメントアウトされています。`url` は、リポジトリのアドレスではなく、公開される、サイトのアドレスです。`cover-image` はなければ、加える必要はありません。
+
+6. `description` を、ご自身の本にあう形に、書き換えてください。
+
+7. index.Rmd と、01-intro.Rmd から書き換えていってください。大枠が決まるまでは、わたしは、01-intro.Rmd, 11-part2.Rmd などと、すこし、間をあけて、番号をふったファイルを作り、書いていっています。章番号は、順番は変えずに、自動的に続き番号になります。むろん、あとから、変更することも可能ですが、`docs` 内に、さまざまなファイルが生成されますので、ある程度、計画的に、ファイルを作成していった方がよいように思います。
+
+### 備考
+
+* 章や節に、ラベルはつける必要はありませんが、日本語の場合には、リンクが特殊文字を含む形式になりますので、99-bookdown.Rmd の章にあるように、少なくとも、章のラベルは、英数でつけておくことをお勧めします。
+* `bookdown` の本に何度も書かれていますが、PDF や、ePub は、ページの概念があり、複雑ですから、まず、基本的な内容を書き終わるまでは、output.yml の bookdown::pdf_book 以下の行をすべて、コメントアウトし（RStudio の場合は、ハイライトさせ、メニューバーの Code の Comment/Uncomment Lines を使えば、簡単にできます。）Book の build の時間も短くなります。
+* PDF を作成するときには、必要に応じて、`preamble.tex` に、情報を加えたり、フォントを追加してください。
