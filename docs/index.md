@@ -1,7 +1,7 @@
 --- 
 title: "BS4 Book Template"
 author: "Hiroshi Suzuki"
-date: "2023-04-11"
+date: "2023-04-13"
 site: bookdown::bookdown_site
 documentclass: bxjsbook #book
 classoption: xelatex, ja=standard
